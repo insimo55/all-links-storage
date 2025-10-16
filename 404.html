@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Перенаправление…</title>
+    <meta name="robots" content="noindex" />
+    <style>
+      :root { color-scheme: light dark; }
+      html, body { height: 100%; }
+      body { margin: 0; display: grid; place-items: center; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+      .box { text-align: center; max-width: 640px; padding: 24px; }
+      h1 { margin: 0 0 8px; font-size: 20px; }
+      p { margin: 0; opacity: .7; }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h1>Пытаюсь перенаправить…</h1>
+      <p>Если вы остались здесь надолго — перейдите на главную.</p>
+    </div>
+    <script>
+      (async function () {
+        function getBasePath() {
+          const path = window.location.pathname;
+          return path.endsWith('/') ? path : path.slice(0, path.lastIndexOf('/') + 1);
+        }
+        const basePath = getBasePath();
+        const parts = window.location.pathname.split('/').filter(Boolean);
+        const slug = parts.length ? parts[parts.length - 1] : '';
+        try {
+          const res = await fetch(basePath + 'links.json', { cache: 'no-store' });
+          if (!res.ok) throw new Error('no links');
+          const links = await res.json();
+          const match = links.find(l => l.slug === slug);
+          if (match) {
+            const openInNew = match.target !== 'self';
+            if (openInNew) {
+              window.location.href = match.url;
+            } else {
+              window.location.replace(match.url);
+            }
+            return;
+          }
+        } catch (e) { /* ignore */ }
+        window.location.replace(basePath + '?notfound=' + encodeURIComponent(slug));
+      })();
+    </script>
+  </body>
+  </html>
+
+

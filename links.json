@@ -1,0 +1,31 @@
+[
+  {
+    "title": "Хим.реагенты",
+    "description": "Сайт для контроля хим.реагентов",
+    "url": "https://chemistry-app-tau.vercel.app/",
+    "slug": "gh",
+    "icon": "/chem.gif",
+    "color": "#24292f",
+    "target": "blank"
+  },
+  {
+    "title": "Электронная доска",
+    "description": "Сайт для просмотра актуальных задач, объектов в работе и тп.",
+    "url": "https://oil-dashboard-kappa.vercel.app/",
+    "slug": "tg",
+    "icon": "dashboard.png",
+    "color": "#2AABEE",
+    "target": "blank"
+  },
+  {
+    "title": "Админ-панель для Электронной доски",
+    "description": "Сайт для управления данными на электронной доске",
+    "url": "https://oil-dashboard-production.up.railway.app/admin",
+    "slug": "site",
+    "icon": "admin.png",
+    "color": "#7aa2ff",
+    "target": "self"
+  }
+]
+
+

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>All Links</title>
+    <meta name="description" content="Собрание ссылок и быстрых перенаправлений" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <h1 class="site-title">Полезные ссылки на проекты</h1>
+        <div class="header-actions">
+          <button id="themeToggle" class="icon-btn" aria-label="Toggle theme" title="Переключить тему">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M21.64 13a1 1 0 0 0-1.05-.14 8 8 0 0 1-10.45-10.45 1 1 0 0 0-.14-1.05A1 1 0 0 0 9 1 10 10 0 1 0 23 15a1 1 0 0 0-1.36-2z" fill="currentColor"/></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <div id="notice" class="notice" hidden></div>
+
+      <section id="linksGrid" class="grid" aria-live="polite"></section>
+    </main>
+
+    <template id="cardTemplate">
+      <a class="card" target="_blank" rel="noopener noreferrer">
+        <div class="card-body">
+          <div class="card-icon" aria-hidden="true"></div>
+          <div class="card-text">
+            <h3 class="card-title"></h3>
+            <p class="card-desc"></p>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="card-hint">Открыть</span>
+        </div>
+      </a>
+    </template>
+
+    <script src="script.js" type="module"></script>
+  </body>
+  </html>
+
+
