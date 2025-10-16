@@ -4,7 +4,7 @@
     "description": "Сайт для контроля хим.реагентов",
     "url": "https://chemistry-app-tau.vercel.app/",
     "slug": "gh",
-    "icon": "/chem.gif",
+    "icon": "chem.gif",
     "color": "#24292f",
     "target": "blank"
   },
