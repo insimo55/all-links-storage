@@ -20,10 +20,19 @@
   {
     "title": "Админ-панель для Электронной доски",
     "description": "Сайт для управления данными на электронной доске",
-    "url": "https://pskbt-check.store/admin/",
+    "url": "https://oil-dashboard-production.up.railway.app/admin",
     "slug": "site",
     "icon": "admin.png",
     "color": "#7aa2ff",
+    "target": "self"
+  },
+  {
+    "title": "Управление документация на хим.реагенты",
+    "description": "Сайт для управления документация на химические реагенты",
+    "url": "https://reagent.chem-application.ru/",
+    "slug": "site",
+    "icon": "paper.png",
+    "color": "#dbb732",
     "target": "self"
   }
 ]
