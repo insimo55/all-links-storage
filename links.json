@@ -11,7 +11,7 @@
   {
     "title": "Электронная доска",
     "description": "Сайт для просмотра актуальных задач, объектов в работе и тп.",
-    "url": "https://oil-dashboard-kappa.vercel.app/",
+    "url": "https://fdashboard.chem-application.ru/",
     "slug": "tg",
     "icon": "dashboard.png",
     "color": "#2AABEE",
@@ -20,7 +20,7 @@
   {
     "title": "Админ-панель для Электронной доски",
     "description": "Сайт для управления данными на электронной доске",
-    "url": "https://pskbt-check.store/admin",
+    "url": "https://dashboard.chem-application.ru/admin/",
     "slug": "site",
     "icon": "admin.png",
     "color": "#7aa2ff",
